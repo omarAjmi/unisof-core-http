@@ -1,5 +1,8 @@
 package com.unisoft.core.http.client;
 
+import com.unisoft.core.http.HttpPipeline;
+import com.unisoft.core.http.serialize.SerializerAdapter;
+
 /**
  * service client builder contract
  *
@@ -15,4 +18,8 @@ public interface ServiceClientBuilder {
     ServiceClient build();
 
     ServiceClientBuilder options(ServiceClientOptions options);
+
+    ServiceClientBuilder serializerAdapter(SerializerAdapter serializerAdapter);
+
+    ServiceClientBuilder httpPipeline(HttpPipeline httpPipeline);
 }

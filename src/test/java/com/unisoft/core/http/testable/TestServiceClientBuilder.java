@@ -6,6 +6,6 @@ public class TestServiceClientBuilder extends ServiceClient.Builder {
 
     @Override
     public ServiceClient build() {
-        return new TestServiceClient(this.getOptions());
+        return new TestServiceClient(this.getOptions(), this.getSerializerAdapter(), this.getHttpPipeline());
     }
 }
