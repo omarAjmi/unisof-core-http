@@ -30,7 +30,7 @@ import java.util.Set;
  * @author omar.H.Ajmi
  * @since 19/10/2020
  */
-final class HttpResponseBodyDecoder {
+public final class HttpResponseBodyDecoder {
 
     private static final Logger log = LoggerFactory.getLogger(HttpResponseBodyDecoder.class);
 
@@ -306,7 +306,7 @@ final class HttpResponseBodyDecoder {
      * @param returnType The return type of the method.
      * @return True if the return type is decodable, false otherwise.
      */
-    private static boolean isReturnTypeDecodable(Type returnType) {
+    public static boolean isReturnTypeDecodable(Type returnType) {
         if (returnType == null) {
             return false;
         }
