@@ -115,8 +115,8 @@ public class ResponseConstructorsCache {
                                 return constructor.newInstance(httpRequest,
                                         responseStatusCode,
                                         responseHeaders,
-                                        bodyAsObject,
-                                        decodedHeaders);
+                                        decodedHeaders,
+                                        bodyAsObject);
                             } catch (IllegalAccessException | InvocationTargetException | InstantiationException e) {
                                 throw LogUtil.logExceptionAsError(log, new RuntimeException("Failed to deserialize 5-parameter"
                                         + " response with decoded headers. ", e));
@@ -127,8 +127,8 @@ public class ResponseConstructorsCache {
                                 return Mono.just(constructor.newInstance(httpRequest,
                                         responseStatusCode,
                                         responseHeaders,
-                                        bodyAsObject,
-                                        null));
+                                        null,
+                                        bodyAsObject));
                             } catch (IllegalAccessException | InvocationTargetException | InstantiationException e) {
                                 throw LogUtil.logExceptionAsError(log, new RuntimeException(
                                         "Failed to deserialize 5-parameter response without decoded headers.", e));
