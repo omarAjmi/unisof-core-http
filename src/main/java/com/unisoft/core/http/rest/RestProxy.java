@@ -477,7 +477,7 @@ public final class RestProxy implements InvocationHandler {
         // 'RestResponseBase' class instead.
         Class<? extends Response<?>> cls = (Class<? extends Response<?>>) TypeUtil.getRawClass(entityType);
         if (cls.equals(Response.class)) {
-            cls = (Class<? extends Response<?>>) ResponseBase.class;
+            cls = (Class) ResponseBase.class;
         }
 
         Constructor<? extends Response<?>> ctr = this.responseConstructorsCache.get(cls);
