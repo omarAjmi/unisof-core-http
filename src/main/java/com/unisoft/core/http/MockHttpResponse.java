@@ -13,6 +13,8 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 /**
+ * a mock useful mainly for testing
+ *
  * @author omar.H.Ajmi
  * @since 18/10/2020
  */
