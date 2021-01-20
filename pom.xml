@@ -104,4 +104,11 @@
         </plugins>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/unisoft-com/unisoft-core-http</url>
+        </repository>
+    </distributionManagement>
 </project>
